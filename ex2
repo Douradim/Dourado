@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
+
+int main() {
+
+    int mat[6][6], i, j, numAleatorios;
+
+    srand(time(NULL));
+    
+    for (i = 0; i < 6; i++) {
+        for (j = 0; j < 6; j++) {
+        	 mat[i][j] = numAleatorios;
+           
+            printf("%3d | ", mat[i][j]); 
+        }
+        printf("\n");
+    }
+
+    printf("\n");
+
+    for (i = 0; i < 6; i++) {
+        for (j = 0; j < 6; j++) {
+        	 mat[i][j] = numAleatorios;
+           if (i==j){
+           	mat[i][j] = 1;
+		   }
+            printf("%3d | ", mat[i][j]); 
+        }
+        printf("\n");
+    }
+
+    printf("\n");
+  
+    return 0;
+}
